@@ -9,7 +9,8 @@ public abstract class Arma {
     private float precio;
     private float capacidad;
     private String fabricante;
-    private static ArrayList <Arma> inventario = new ArrayList<>();
+    public static ArrayList <Arma> inventario = new ArrayList<>();
+
 
 
     public String getSn() {
@@ -51,8 +52,19 @@ public abstract class Arma {
     public void setCapacidad(float capacidad) {
         this.capacidad = capacidad;
     }
-    public static ArrayList<Arma> getInventario() {
-        return inventario;
+    public static void getInventario() {
+        for (Arma a : inventario){
+            System.out.println(inventario.indexOf(a) + "- " + a.toString());
+        }
+    }
+
+    public static void eliminarInventario(){
+        int indice;
+        System.out.println("INDICA QUE ARMA QUIERES ELIMINAR");
+        getInventario();
+        String seleccion = Main.scanner.nextLine();
+        indice = Integer.parseInt(seleccion);
+        inventario.remove(indice);
     }
 
     public static void setInventario(ArrayList<Arma> inventario) {
@@ -77,5 +89,38 @@ public abstract class Arma {
         this.capacidad = capacidad;
         this.precio = precio;
         this.fabricante = fabricante;
+    }
+    public static void menuArma(){
+        int nueva = 0;
+        boolean flag = true;
+        while (flag != false){
+            System.out.println("-------------------------");
+            System.out.println("|       AÑADIR ARMA     |");
+            System.out.println("-------------------------");
+            System.out.println("| 1.- Arma corta        |");
+            System.out.println("| 2.- Arma larga        |");
+            System.out.println("| 3.- Vovler            |");
+            System.out.println("-------------------------");
+            try {
+
+                String nuevaArma = Main.scanner.nextLine();
+                nueva = Integer.parseInt(nuevaArma);
+            } catch (Exception e){
+                System.out.println("ha introducido un caracter no valido,\npor favor, introduzca un numero.");
+                continue;
+            }
+            switch (nueva){
+                case 1:
+                    ArmaCorta.anadirArmaCorta();
+                    break;
+                case 2:
+                    ArmaLarga.anadirArmaLarga();
+                    break;
+                case 3:
+                    flag = false;
+                    break;
+
+            }
+        }
     }
 }
