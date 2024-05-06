@@ -7,9 +7,10 @@ public abstract class Arma {
     private boolean funcionando;
     private float cal;
     private float precio;
-    private float capacidad;
+    private int capacidad;
     private String fabricante;
     public static ArrayList <Arma> inventario = new ArrayList<>();
+
 
 
 
@@ -45,11 +46,11 @@ public abstract class Arma {
         this.precio = precio;
     }
 
-    public float getCapacidad() {
+    public int getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(float capacidad) {
+    public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
     }
     public static void getInventario() {
@@ -82,7 +83,7 @@ public abstract class Arma {
     public Arma() {
     }
 
-    public Arma(String sn, boolean funcionando, float cal, float capacidad, float precio, String fabricante) {
+    public Arma(String sn, boolean funcionando, float cal, int capacidad, float precio, String fabricante) {
         this.sn = sn;
         this.funcionando = funcionando;
         this.cal = cal;

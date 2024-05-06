@@ -7,7 +7,7 @@ public class ArmaLarga extends Arma {
     public ArmaLarga() {
     }
 
-    public ArmaLarga(String sn, boolean funcionando, float cal, float capacidad, float precio, String fabricante, float alcance, boolean visor, String cadencia) {
+    public ArmaLarga(String sn, boolean funcionando, float cal, int capacidad, float precio, String fabricante, float alcance, boolean visor, String cadencia) {
         super(sn, funcionando, cal, capacidad, precio, fabricante);
         this.alcance = alcance;
         this.visor = visor;
