@@ -8,18 +8,25 @@ public class ArmaCorta extends Arma {
 
     @Override
     public String toString() {
-        return "ArmaCorta{" +
-                "sn='" + getSn() + '\'' +
-                ", funcionando=" + isFuncionando() +
-                ", cal=" + getCal() +
-                ", precio=" + getPrecio() + " €"+
-                ", capacidad=" + getCapacidad() +
-                ", fabricante='" + getFabricante() + '\'' +
-                ", tambor=" + tambor +
-                ", rafaga=" + rafaga +
+        return "ArmaCorta {" +
+                "sn = '" + getSn() + '\'' +
+                ", funcionando = " + isFuncionando() +
+                ", cal = " + getCal() +
+                ", precio = " + getPrecio() + " €"+
+                ", capacidad = " + getCapacidad() +
+                ", fabricante = '" + getFabricante() + '\'' +
+                ", tambor = " + tambor +
+                ", rafaga = " + rafaga +
                 '}';
     }
 
+    public void dispara() {
+        if (rafaga == true){
+            System.out.println("sonido de disparo: prrrr prrrr");
+        }else{
+            System.out.println("sonido de disparo: pium pium");
+        }
+    }
 
     public ArmaCorta() {
     }
@@ -111,6 +118,7 @@ public class ArmaCorta extends Arma {
                 } catch (Exception e) {
                     System.out.println("Respuesta invalida");
                 }
+            }
 
                 int o = 0;
                 while (o != 1) {
@@ -129,12 +137,12 @@ public class ArmaCorta extends Arma {
                         }
 
                     } catch (Exception e) {
-                        System.out.println("Respuesta invalida");
+                        System.out.println("Respuesta no valida");
                     }
 
                 }
-                inventario.add(nuevaArmaCorta);
-            }
+                armeria.add(nuevaArmaCorta);
+                nuevaArmaCorta.dispara();
         }
     }
 }
