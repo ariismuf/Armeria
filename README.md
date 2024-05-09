@@ -1,11 +1,8 @@
 # Proyecto de Programación Orientada a Objetos en Java: Armería Virtual
 
-En este proyecto, se desarrollará una armería virtual en Java para gestionar armas y una variedad de accesorios esenciales para su funcionamiento. El sistema constará de al menos siete clases donde se aplicarán los siguientes conceptos fundamentales:
+Necesitamos hacer una tienda online para la venta de armas y de equipo relacionado tanto para civiles como para cuerpos de seguirdad del estado.
+es necesario que recoja información de las armas que se reciben en la tienda para poner al mercado diferenciando si son armas largas o cortas y tendremos que tener en cuenta diferentes características en cada clase, por ejemplo, en armas cortas es importante saber el tipo de disparo que se ejecuta y en arma larga podriamos preguntar la distancia efectiva de ese arma.
 
-- **Herencia:** Organizaremos las relaciones entre diferentes tipos de armas y accesorios mediante la herencia, permitiendo una estructura jerárquica eficiente.
+En el apartado del inventariode articulos que no son armas es interesante coger información de las unidades que recivimos o la finalidad de dicho articulo, ya sea un cargador o una mochila.
 
-- **Abstracciones:** Utilizaremos abstracciones para modelar características comunes entre las distintas clases, facilitando la reutilización de código y la adaptabilidad del sistema.
-
-- **Métodos estáticos:** Implementaremos métodos estáticos para compartir funcionalidades comunes de manera eficiente y accesible en todo el programa.
-
-Este proyecto proporcionará una sólida comprensión de la programación orientada a objetos en Java, así como experiencia práctica en el diseño y desarrollo de sistemas modulares y mantenibles.
+tenemos que poder ver y eliminar los articulos tanto de la armeria como del inventario y todos sus parametros en una lista ordenada.
