@@ -15,6 +15,8 @@ public class Main {
         System.out.println("-------------------------");
         System.out.println("| 1.- Añadir arma       |");
         System.out.println("| 2.- Eliminar arma     |");
+        System.out.println("| 3.- Añadir articulo   |");
+        System.out.println("| 4.- ");
         System.out.println("| 5.- Armeria           |");
         System.out.println("| 6.- Inventario        |");
         System.out.println("| 7.- Salir             |");
@@ -39,7 +41,7 @@ public class Main {
                 Inventario.anadirInventario();
                 break;
             case 4:
-                Arma.eliminarArmeria();
+                Inventario.eliminarInventario();
                 break;
             case 5:
                 System.out.println("ARMERIA");

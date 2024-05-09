@@ -75,10 +75,10 @@ public class Inventario {
                     Municion.anadirMunicion();
                     break;
                 case 2:
-                    ArmaLarga.anadirArmaLarga();
+                    Mira.anadirMira();
                     break;
                 case 3:
-
+                    Equipo.anadirEquipo();
                 case 4:
                     flag = false;
                     break;
@@ -86,4 +86,28 @@ public class Inventario {
             }
         }
     }
-}
+    public static void eliminarInventario(){
+            int menuInventario = 0;
+            System.out.println("-------------------------");
+            System.out.println("|   ELIMINAR articulo   |");
+            System.out.println("-------------------------");
+            System.out.println("| 1.- Eliminar articulo |");
+            System.out.println("| 2.-Volver             |");
+            System.out.println("-------------------------");
+            String seleccion = Main.scanner.nextLine();
+            menuInventario = Integer.parseInt(seleccion);
+            switch (menuInventario){
+                case 1:
+                    int indice;
+                    System.out.println("INDICA QUE ARMA QUIERES ELIMINAR");
+                    getInventario();
+                    String seleccionEliminar = Main.scanner.nextLine();
+                    indice = Integer.parseInt(seleccionEliminar);
+                    inventario.remove(indice);
+                    break;
+                case 2:
+                    break;
+            }
+        }
+    }
+
